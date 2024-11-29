@@ -1,11 +1,10 @@
-import json
-import os
+from my_imports import *
 
 class InteractionInfo:
     def __init__(self, username="", password=""):
         self.username = username
         self.password = password
-
+        self.browser = webdriver.Chrome()
     def sign_in(self):
         print("Please enter your username and password")
         self.username = input("Username: ")
@@ -25,7 +24,20 @@ class InteractionInfo:
                 self.password = account_info["password"]
         else:
             print("Account information file not found.")
+    def login(self):
+        url = f"https://www.instagram.com/"
+        self.browser.get(url)
+        time.sleep(3)
 
+    # Login to Instagram
+        self.browser.find_element(By.XPATH,"//*[@id='loginForm']/div/div[1]/div/label/input").send_keys(self.username)
+        self.browser.find_element(By.XPATH,"//*[@id='loginForm']/div/div[2]/div/label/input").send_keys(self.password)
+
+# Click the login button
+
+        self.browser.find_element(By.XPATH,"//*[@id='loginForm']/div/div[3]").click()
+        time.sleep(3)
+        return "succesfull"
 
 
 if __name__ == "__main__":
