@@ -38,6 +38,14 @@ class InteractionInfo:
         self.browser.find_element(By.XPATH,"//*[@id='loginForm']/div/div[3]").click()
         time.sleep(3)
         return "succesfull"
+    def getFollowers(self):
+        self.browser.get(f"https://www.instagram.com/{self.username}/")
+
+        time.sleep(3)
+        #for clciking fallowers page
+        self.browser.find_element(By.XPATH,"//*[@id='mount_0_0_kT']/div/div/div[2]/div/div/div[1]/div[2]/div/div[1]/section/main/div/header/section[3]/ul/li[2]/div/a").click()
+        
+
 
 
 if __name__ == "__main__":
