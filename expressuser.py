@@ -18,6 +18,7 @@ class InteractionInfo:
         print(f"Data saved to {file_path}")
 
 
-interaction = InteractionInfo()
-interaction.sign_in()
+
+if __name__ == "__main__":
+    print("This is the module.py file.")
 
