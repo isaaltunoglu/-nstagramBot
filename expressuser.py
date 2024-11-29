@@ -1,4 +1,12 @@
-from my_imports import *
+from selenium import webdriver
+import json
+import os
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+import time
+
+
+
 
 class InteractionInfo:
     def __init__(self, username="", password=""):
@@ -45,6 +53,7 @@ class InteractionInfo:
         #for clciking fallowers page
         self.browser.find_element(By.XPATH,"//*[@id='mount_0_0_kT']/div/div/div[2]/div/div/div[1]/div[2]/div/div[1]/section/main/div/header/section[3]/ul/li[2]/div/a").click()
         
+
 
 
 
