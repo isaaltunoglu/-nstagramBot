@@ -6,4 +6,3 @@ from my_imports import *
 opm = InteractionInfo()
 opm.sign_in()
 opm.login()
-opm.getFollowers()
